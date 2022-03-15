@@ -1,0 +1,359 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+@keyframes botao {
+    0% {
+        opacity: 0.3;
+    }
+    50%  {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Selima';
+    src: url(fontes/Selima\ .otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Vermin';
+    src: url('fontes/Vermin\ Vibes\ 2\ Soft.otf') format('opentype');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+ }
+
+ /* Cabeçalho */
+
+ header {
+     background-color: black;
+ }
+
+ nav {
+     background-color: black;
+     display: flex;
+     flex-wrap: wrap;
+     padding: 30px 10px;
+     flex-direction: column;
+     margin: 0 auto;
+     max-width: 1200px;
+     flex: 1 1 400px;
+     justify-content: space-around;
+    
+ }
+
+ nav img {
+     align-self: center; 
+     animation: fadeOut 2s ease-in-out;
+}
+
+ nav > div {
+     align-self: flex-end; 
+     padding: 10px 10px;   
+}
+nav > div > a {
+    padding: 3px;
+    transition-duration: 0.2s;
+}
+
+nav > div > a:hover {
+    filter: brightness(70%);
+    transition-duration: 0.3s;
+}
+
+@media (max-width: 693px) {
+    nav > div {
+        align-self: center;
+        padding: 10px;
+    }
+
+    nav > div > a > img {
+        max-width: 14px;
+    }
+}
+
+
+
+
+ /* Parte Inicial */
+
+ main {
+     color: white;
+     background-color: black;
+     
+ }
+
+ .itens-1 {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     flex-direction: row-reverse;
+     height: 130vh;
+     background-image: url(imgprincipal/img.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     transition-duration: 0.5s;
+     animation: fadeOut 2s ease-in-out;
+ }
+
+ @media (max-width: 550px) {
+     .itens-1 {
+         height: 70vh;
+     }
+
+ }
+
+ .itens-1 h1 {
+     font-size: clamp(1em, 1.6em + 3vw, 4.3em);
+     padding-bottom: 5px;
+     letter-spacing: 3px;
+     font-family: 'Selima', sans-serif;
+     font-weight: 300;
+     padding: 5px;
+     margin-top: 70px;
+ }
+
+.itens-1 p {
+     padding-top: 10px; 
+     letter-spacing: 3px; 
+     padding-bottom: 5px;
+     font-family: 'Lato'; 
+     font-size: clamp(0.5em, 0.5em + 1.4vw, 1.3em);
+ }
+
+
+ .texto-1 {
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .data {
+     font-size: clamp(0.3em, 0.3em + 1vw, 0.7em) !important;
+     letter-spacing: 5px !important;
+ }
+
+ .nome-avicii {
+    font-family: 'Vermin', sans-serif !important;
+    color: white;
+    font-size: clamp(1em, 1.6em + 2vw, 3em) !important;
+    margin-top: 10px;
+ }
+
+ .texto-2 {
+     display: flex;
+     flex-direction: column;
+     max-width: 750px;
+     margin: 0 auto;
+     text-align: center;
+     margin-bottom: 100px; 
+ }
+
+ @media (max-width: 650px) {
+     .texto-2 {
+         margin-bottom: -100px;
+     }
+ }
+
+ .texto-2 h2 {
+     font-family: 'Selima';
+     font-size: clamp( 1em, 1.8em + 3vw, 4em);
+     font-weight: 100;
+ }
+ 
+ .texto-2 p {
+     font-family: 'Lato';
+     letter-spacing: 3px;
+     padding: 15px 10px;
+     font-size: clamp(0.5em, 0.5em + 1vw, 1.1em);
+ }
+
+
+
+ 
+ /* Share */
+
+ .section-share {
+     margin: 0 auto;
+     display: flex;
+     margin-top: 30px;
+     background-image: url(imgmundo/mundo.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     max-width: 1200px;
+ }
+
+ @media (max-width: 500px) {
+    .section-share {
+        margin-bottom: -100px;
+    }
+ }
+
+ button {
+     background-color: black;
+     color: white;
+     border: 2.5px solid white;
+     font-family: 'Lato';
+     letter-spacing: 1px;
+     font-weight: 700;
+     padding: 20px 20px;
+     font-size: 1em;
+     margin: 0 auto;
+     margin-top: 200px;
+     margin-bottom: 200px;
+     animation: botao 2s ease-in-out infinite;
+ }
+
+ @media (max-width: 843px) {
+     .section-share {
+         background-image: url(imgmundo/mundo.png);
+         background-size: contain;
+
+     }
+ }
+
+ @media (max-width: 619px) {
+    button {
+        align-items: center;
+        font-size: 0.7em;
+        max-height: 50px;
+        padding: 10px 10px;
+    }
+ }
+
+
+
+ /* Comments-Imagens */
+
+  section .comments-imagens {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    height: 150px;
+    text-decoration: none;
+ }
+
+
+ .comments-imagens a {
+    letter-spacing: 6px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-size: 0.7em;
+    transition-duration: 0.3s;
+ }
+
+ .comments-imagens a:hover {
+    filter: brightness(70%);
+    color: rgb(185, 185, 255);
+ }
+
+ .consideracoes {
+     max-width: 500px;
+     display: flex;
+     margin: 0 auto;
+     font-family: 'Lato';
+     font-size: clamp(0.5em, 0.5em + 1.5vw, 1.3em);
+     text-align: center;
+     margin-bottom: 150px;
+     letter-spacing: 5px;
+     padding: 10px;
+ }
+
+ /* Instagram */
+
+ .titulo-instagram {
+     text-align: center;
+     margin-bottom: 30px;
+     font-family: 'Lato';
+     font-size: clamp(0.6em, 1em + 2vw, 2em);
+     letter-spacing: 5px;
+     font-weight: 200;
+ }
+
+ .img-instagram {
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 1250px;
+     margin: 0 auto;
+ }
+
+ .img-instagram img {   
+     max-width: 100%;
+     max-width: 400px;
+     justify-content: center;
+     padding: 5px;
+     flex: 1 1 260px !important;
+     margin: 0 auto;
+     transition-duration: 0.4s;
+ }
+
+ .img-instagram img:hover {
+    filter: brightness(70%);
+ }
+
+
+ @media (max-width: 839px) {
+     .img-instagram img {
+         max-width: 100%;
+         max-width: 195px;
+     }
+ }
+
+ @media (max-width: 393px) {
+    .img-instagram img {
+        max-width: 100%;
+        flex: 1 1 185px;
+    }
+ }
+
+ @media (max-width: 363px) {
+    .img-instagram img {
+        max-width: 100%;
+        flex: 1 1 170px;
+    }
+ }
+
+ @media (max-width: 375px) {
+    .img-instagram img {
+        max-width: 100%;
+        max-width: 170px;
+    }
+ }
+ 
+ /* Footer */
+
+ footer p {
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 1em;
+    letter-spacing: 3px;
+    font-weight: 200;
+    background-color: black;
+    color: white;
+    padding: 20px;
+ }
+
+ footer a {
+     color: white;
+     text-decoration: none;
+ }
+
+ footer a:hover {
+     text-decoration: underline;
+ }
