@@ -275,6 +275,10 @@ nav > div > a:hover {
      padding: 10px;
  }
 
+ html {
+    scroll-behavior: smooth;
+ }
+
  /* Instagram */
 
  .titulo-instagram {
